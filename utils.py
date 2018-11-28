@@ -8,3 +8,9 @@ def read_train_data(path):
 def read_test_data(path):
     x = pd.read_csv(path)
     return x
+def save_data(path, data):
+    data = pd.DataFrame(data, columns = ["Label"])
+    data.index.name = "ImageId"
+    data.index += 1
+    data.to_csv(path)
+    
