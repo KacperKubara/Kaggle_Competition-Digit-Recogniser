@@ -15,6 +15,8 @@ from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_jobs = -1)
 knn.fit(x_train, y_train)
 y_pred = knn.predict(x_test)
+
 # Save the data 
+utils.save_data("results.csv", y_pred)
 
  
